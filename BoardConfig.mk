@@ -78,6 +78,11 @@ BOARD_KERNEL_IMAGE_NAME        := Image.gz
 BOARD_KERNEL_LOAD_BASE         := 0x88000000
 BOARD_MKBOOTIMG_ARGS           := --base $(BOARD_KERNEL_LOAD_BASE)
 
+# TWRP Support
+ifeq ($(WITH_TWRP),true)
+include device/nintendo/nx/twrp/twrp.mk
+endif
+
 # Recovery
 TARGET_RECOVERY_DENSITY      := hdpi
 TARGET_RECOVERY_FSTAB        := device/nintendo/nx/initfiles/fstab.nx
