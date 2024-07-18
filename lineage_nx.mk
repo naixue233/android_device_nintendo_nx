@@ -23,7 +23,7 @@ include device/nintendo/nx/lineage.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Inherit some common ATV stuff.
-$(call inherit-product, device/google/atv/products/atv_base.mk)
+# $(call inherit-product, device/google/atv/products/atv_base.mk)
 
 # Inherit device configuration for nx.
 $(call inherit-product, device/nintendo/nx/device.mk)
